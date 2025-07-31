@@ -1,0 +1,8 @@
+"./adc12_triggered_by_timer_event.o"
+"./ti_msp_dl_config.o"
+"./startup_mspm0g350x_ticlang.o"
+"./User/ADC.o"
+"./User/No_Mcu_Ganv_Grayscale_Sensor.o"
+-l"./device_linker.cmd"
+-ldevice.cmd.genlibs
+-llibc.a
