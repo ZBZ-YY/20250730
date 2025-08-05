@@ -274,8 +274,8 @@ def detection():
         img_center_x = DISPLAY_WIDTH // 2
         img_center_y = DISPLAY_HEIGHT // 2
         #初始化PID控制器
-        pid_x = PIDController(Kp-0.2, Ki, Kd+0.2,integral_limit=50, output_limit=80,deadzone=2.0)
-        pid_y = PIDController(Kp-0.45, Ki, Kd-0.2,integral_limit=50, output_limit=80,deadzone=1.0)
+        pid_x = PIDController(Kp-0.3, Ki, Kd+0.3,integral_limit=50, output_limit=80,deadzone=2.0)
+        pid_y = PIDController(Kp-0.35, Ki, Kd+0.2,integral_limit=50, output_limit=80,deadzone=1.0)
 
 #pid_x = PIDController (Kp-0.15, Ki, Kd-0.1, integral_limit=50, output_limit=80, deadzone=7.5)​
 #pid_y = PIDController (Kp-0.25, Ki, Kd-0.2, integral_limit=50, output_limit=80, deadzone=5.0)​
@@ -325,7 +325,7 @@ def detection():
 
                             # 直接使用原始分辨率坐标计算中心点
                             center_x = (x1 + x2) / 2
-                            center_y = (y1 + y2) / 2
+                            center_y = (y1 + y2) / 2 + 10
 
                             # 计算误差（基于原始分辨率）
                             error_x = algo_center_x - center_x
